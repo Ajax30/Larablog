@@ -18,3 +18,7 @@ Route::get('/', [App\Http\Controllers\Frontend\HomepageController::class, 'index
 Auth::routes();
 
 Route::get('/dashboard', [App\Http\Controllers\Dashboard\DashboardController::class, 'index'])->name('dashboard');
+
+Route::get('/dashboard/profile', [App\Http\Controllers\Dashboard\UserProfileController::class, 'index'])->name('profile');
+
+Route::post('/dashboard/profile/update', [App\Http\Controllers\Dashboard\UserProfileController::class, 'update'])->name('update');
