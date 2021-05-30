@@ -28,8 +28,8 @@ This is a modern, easy to use CMS, built with Laravel 8.
 It is work in progress, **NOT** yet ready for production.
 
 
-# License
+## License
 
-MIT License
+### MIT License
 
 This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
