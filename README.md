@@ -21,7 +21,7 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## About this project
+# About this project
 
 This is a modern, easy to use CMS, built with Laravel 8.
 
