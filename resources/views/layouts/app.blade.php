@@ -47,8 +47,11 @@
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <li class="nav-item dropdown d-flex">
+
+                            		<img class="rounded-circle avatar-top" src="{{asset('images/avatars')}}/{{Auth::user()->avatar}}" alt="{{Auth::user()->first_name}} {{Auth::user()->first_name}}">
+
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle user-dropdown-trigger" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->first_name }} {{ Auth::user()->last_name }}
                                 </a>
 
@@ -75,7 +78,9 @@
         </nav>
 
         <main class="py-4">
-            @yield('content')
+					@include('partials/flash-messages')
+
+          @yield('content')
         </main>
     </div>
 </body>

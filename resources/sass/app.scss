@@ -1,8 +1,84 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
+@import "~font-awesome/scss/font-awesome";
 
 // Variables
 @import 'variables';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+
+// More Button styles
+
+.file-upload-btn {
+	width: 350px;
+	position: relative;
+
+	&:focus {
+		border-width: 0 !important;
+		outline: none !important;
+		box-shadow: none;
+	}
+	&::-webkit-file-upload-button {
+		visibility: hidden;
+	}
+	&::before {
+		content: 'Choose file';
+		display: inline-block;
+		background-color: #3490dc;
+		border-color: #2176bd;
+		border-radius: 3px;
+		padding: 9px 12px 7px 32px;
+		outline: none;
+		white-space: nowrap;
+		-webkit-user-select: none;
+		cursor: pointer;
+		color: #fff;
+		font-size: 10pt;
+	}
+	&:hover {
+		&::before {
+			background: #227dc7;
+		}
+	}
+	&:active {
+		&::before {
+			background: #227dc7;
+		}
+	}
+	&::after {
+		content: "\f093";
+		font-family: FontAwesome;
+		font-style: normal;
+		font-weight: normal;
+		text-decoration: inherit;
+		color: #fff;
+		font-size: 16px;
+		padding-right: 12px;
+		position: absolute;
+		top: 6px;
+		left: 11px;
+	}
+}
+
+// Avatar
+
+.user-dropdown-trigger {
+	line-height: 1;
+}
+
+.avatar-top {
+	height: 34px;
+    width: auto;
+	padding: 1px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.avatar-preview {
+	max-width: 85px;
+    float: right;
+    margin-top: -25px;
+    background: #f7f7f7;
+}
+
