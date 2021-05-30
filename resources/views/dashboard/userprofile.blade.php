@@ -48,13 +48,21 @@
 														@endif
 													</div>
 
-													<div class="w-25">
+													<div class="w-25 position-relative" id="avatar-container">
 														<img class="rounded-circle img-thumbnail avatar-preview" src="{{asset('images/avatars')}}/{{$current_user->avatar}}" alt="{{$current_user->first_name}} {{$current_user->first_name}}">
+														<span class="avatar-trash">
+															<a href="#" class="icon text-light" id="delete-avatar" data-uid="{{$current_user->id}}"><i class="fa fa-trash"></i></a>
+														</span>
 													</div>
 												</div>
 
-                        <div class="form-group mb-0">
-                            <input type="submit" name="submit" value='Save' class='btn btn-block btn-primary'>
+                        <div class="form-group d-flex mb-0">
+                            <div class="w-50 pr-1">
+															<input type="submit" name="submit" value="Save" class="btn btn-block btn-primary">
+														</div>
+														<div class="w-50 pl-1">
+															<a href="{{route('profile')}}" class="btn btn-block btn-primary">Cancel</a>
+														</div>
                         </div>
                     </form>
                 </div>

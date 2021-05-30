@@ -77,8 +77,36 @@
 
 .avatar-preview {
 	max-width: 85px;
-    float: right;
-    margin-top: -25px;
-    background: #f7f7f7;
+	float: right;
+	margin-top: -25px;
+	background: #f7f7f7;
+}
+
+.avatar-trash {
+	transition: all .5s ease;
+	position: absolute;
+	right: 0;
+	top: -25px;
+	bottom: 0;
+	width: 100%;
+	max-width: 90px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, .2);
+	visibility: visible;
+	opacity: 0;
+	font-size: 133%;
+
+	&:hover {
+		opacity: 1;
+	}
+
+	a {
+		line-height: 1;
+		text-shadow: 1px 1px rgba(1, 1, 1, .2);
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
 }
 
