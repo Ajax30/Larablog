@@ -13,4 +13,5 @@ class UserProfile extends Model
 			'bio',
 			'avatar',
     ];
+		
 }

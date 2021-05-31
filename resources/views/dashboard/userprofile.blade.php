@@ -51,8 +51,10 @@
 													<div class="w-25 position-relative" id="avatar-container">
 														<img class="rounded-circle img-thumbnail avatar-preview" src="{{asset('images/avatars')}}/{{$current_user->avatar}}" alt="{{$current_user->first_name}} {{$current_user->first_name}}">
 														<span class="avatar-trash">
-															<a href="#" class="icon text-light" id="delete-avatar" data-uid="{{$current_user->id}}"><i class="fa fa-trash"></i></a>
-														</span>
+                              @if($current_user->avatar !== 'default.png')
+															  <a href="#" class="icon text-light" id="delete-avatar" data-uid="{{$current_user->id}}"><i class="fa fa-trash"></i></a>
+                              @endif
+                            </span>
 													</div>
 												</div>
 

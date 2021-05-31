@@ -22,3 +22,5 @@ Route::get('/dashboard', [App\Http\Controllers\Dashboard\DashboardController::cl
 Route::get('/dashboard/profile', [App\Http\Controllers\Dashboard\UserProfileController::class, 'index'])->name('profile');
 
 Route::post('/dashboard/profile/update', [App\Http\Controllers\Dashboard\UserProfileController::class, 'update'])->name('profile.update');
+
+Route::post('/dashboard/profile/deleteavatar/{id}', [App\Http\Controllers\Dashboard\UserProfileController::class, 'deleteavatar'])->name('profile.deleteavatar');

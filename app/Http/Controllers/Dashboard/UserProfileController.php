@@ -51,4 +51,12 @@ class UserProfileController extends Controller
 			return redirect('dashboard/profile')
 				->with('success', 'User data updated successfully');
 		}
+
+		// Delete avatar
+		public function deleteavatar($id) {
+			$current_user = Auth::user();
+			$current_user->avatar = "default.png";
+			$current_user->save();
+		}
+
 }

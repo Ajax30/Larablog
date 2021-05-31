@@ -49,7 +49,7 @@
                         @else
                             <li class="nav-item dropdown d-flex">
 
-                            		<img class="rounded-circle avatar-top" src="{{asset('images/avatars')}}/{{Auth::user()->avatar}}" alt="{{Auth::user()->first_name}} {{Auth::user()->first_name}}">
+                            		<img class="rounded-circle avatar-top" id="top_avatar" src="{{asset('images/avatars')}}/{{Auth::user()->avatar}}" alt="{{Auth::user()->first_name}} {{Auth::user()->first_name}}">
 
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle user-dropdown-trigger" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->first_name }} {{ Auth::user()->last_name }}
@@ -83,5 +83,6 @@
           @yield('content')
         </main>
     </div>
+		<script>var APP_URL = "{!! url('/') !!}"</script>
 </body>
 </html>
