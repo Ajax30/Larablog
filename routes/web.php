@@ -21,4 +21,4 @@ Route::get('/dashboard', [App\Http\Controllers\Dashboard\DashboardController::cl
 
 Route::get('/dashboard/profile', [App\Http\Controllers\Dashboard\UserProfileController::class, 'index'])->name('profile');
 
-Route::post('/dashboard/profile/update', [App\Http\Controllers\Dashboard\UserProfileController::class, 'update'])->name('update');
+Route::post('/dashboard/profile/update', [App\Http\Controllers\Dashboard\UserProfileController::class, 'update'])->name('profile.update');
