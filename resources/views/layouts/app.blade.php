@@ -49,7 +49,7 @@
                         @else
                             <li class="nav-item dropdown d-flex">
 
-                            		<img class="rounded-circle avatar-top" id="top_avatar" src="{{asset('images/avatars')}}/{{auth()->user()->avatar}}" alt="{{auth()->user()->first_name}} {{auth()->user()->first_name}}">
+                            		<img class="rounded-circle avatar-top" id="top_avatar" src="{{asset('images/avatars')}}/{{auth()->user()->avatar}}" alt="{{auth()->user()->first_name}} {{auth()->user()->last_name}}">
 
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle user-dropdown-trigger" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ auth()->user()->first_name }} {{ auth()->user()->last_name }}
