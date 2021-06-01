@@ -32,7 +32,6 @@ class UserProfileController extends Controller
 					'avatar' => ['mimes:jpeg, jpg, png, gif', 'max:2048'],
 			]);
 		
-
 			$current_user->first_name = $request->get('first_name');
 			$current_user->last_name = $request->get('last_name');
 			$current_user->email = $request->get('email');
@@ -40,14 +39,13 @@ class UserProfileController extends Controller
 
 			// Upload avatar
 			if (isset($request->avatar)) {
-				$imageName = md5(time()) . '.' . $request->avatar->extension();
+				$imageName = md5(time()) . $current_user->id . '.' . $request->avatar->extension();
 				$request->avatar->move(public_path('images/avatars'), $imageName);
 				$current_user->avatar = $imageName;
 			}
 		
 			// Update user
 			$current_user->update();
-
 			return redirect('dashboard/profile')
 				->with('success', 'User data updated successfully');
 		}
@@ -58,5 +56,4 @@ class UserProfileController extends Controller
 			$current_user->avatar = "default.png";
 			$current_user->save();
 		}
-
 }
