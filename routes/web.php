@@ -23,4 +23,4 @@ Route::get('/dashboard/profile', [App\Http\Controllers\Dashboard\UserProfileCont
 
 Route::post('/dashboard/profile/update', [App\Http\Controllers\Dashboard\UserProfileController::class, 'update'])->name('profile.update');
 
-Route::post('/dashboard/profile/deleteavatar/{id}', [App\Http\Controllers\Dashboard\UserProfileController::class, 'deleteavatar'])->name('profile.deleteavatar');
+Route::post('/dashboard/profile/deleteavatar/{id}/{fileName}', [App\Http\Controllers\Dashboard\UserProfileController::class, 'deleteavatar'])->name('profile.deleteavatar');
