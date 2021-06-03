@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use Auth;
 use App\Models\UserProfile;
 
@@ -51,9 +52,13 @@ class UserProfileController extends Controller
 		}
 
 		// Delete avatar
-		public function deleteavatar($id) {
+		public function deleteavatar($id, $fileName) {
 			$current_user = Auth::user();
 			$current_user->avatar = "default.png";
 			$current_user->save();
+
+			if(File::exists(public_path('images/avatars/' . $fileName))){
+				File::delete(public_path('images/avatars/' . $fileName));
+			}
 		}
 }
