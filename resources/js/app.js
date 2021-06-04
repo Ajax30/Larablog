@@ -14,21 +14,21 @@ require('./bootstrap');
 			var fileName = $avatar.attr('src').split('/').reverse()[0];
 
 			if (confirm('Delete the avatar?')) {
-					var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
-					$.ajax({
-							url: APP_URL + `/dashboard/profile/deleteavatar/${id}/${fileName}`,
-							method: 'POST',
-							data: {
-									id: id,
-									fileName: fileName,
-									_token: CSRF_TOKEN,
-							},
-							success: function() {
-									$avatar.attr('src', defaultAvatar);
-									$topAvatar.attr('src', defaultAvatar);
-									$trashIcon.remove();
-							}
-					});
+				var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+				$.ajax({
+						url: APP_URL + `/dashboard/profile/deleteavatar/${id}/${fileName}`,
+						method: 'POST',
+						data: {
+								id: id,
+								fileName: fileName,
+								_token: CSRF_TOKEN,
+						},
+						success: function() {
+								$avatar.attr('src', defaultAvatar);
+								$topAvatar.attr('src', defaultAvatar);
+								$trashIcon.remove();
+						}
+				});
 			}
 	});
 })();
