@@ -12,31 +12,31 @@
 
                         <div class="form-group">
                             <input type="text" id="first_name" name="first_name" placeholder="First name" class="form-control" value="{{old('first_name', $current_user->first_name)}}">
-                            @if ($errors->has('first_name'))
-                              <span class="errormsg text-danger">{{ $errors->first('first_name') }}</span>
-                            @endif
+                            @error('first_name')
+                              <span class="errormsg text-danger">{{ $message }}</span>
+                            @enderror
                         </div>
 
 												<div class="form-group">
                             <input type="text" id="last_name" name="last_name" placeholder="Last name" class="form-control" value="{{old('last_name', $current_user->last_name)}}">
-                            @if ($errors->has('first_name'))
-                              <span class="errormsg text-danger">{{ $errors->first('last_name') }}</span>
-                            @endif
+                            @error('last_name')
+                              <span class="errormsg text-danger">{{ $message }}</span>
+                            @enderror
                         </div>
 
 												<div class="form-group">
                             <input type="text" id="email" name="email" placeholder="E-mail address" class="form-control" value="{{old('email', $current_user->email)}}">
-                            @if ($errors->has('email'))
-                              <span class="errormsg text-danger">{{ $errors->first('email') }}</span>
-                            @endif
+                            @error('email')
+                              <span class="errormsg text-danger">{{ $message }}</span>
+                            @enderror
                         </div>
 
 												<div class="form-group">
 													<textarea name="bio" id="bio" class="form-control" cols="30" rows="6">{{old('bio', $current_user->bio)}}</textarea>
 
-														@if ($errors->has('bio'))
-                              <span class="errormsg text-danger">{{ $errors->first('bio') }}</span>
-                            @endif
+                            @error('bio')
+                              <span class="errormsg text-danger">{{ $message }}</span>
+                            @enderror
 												</div>
 
                         <label for="avatar" class="text-muted">Upload avatar</label>
