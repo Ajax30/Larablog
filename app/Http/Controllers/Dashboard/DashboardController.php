@@ -9,11 +9,6 @@ use Illuminate\Http\Request;
 class DashboardController extends Controller
 {
 
-    // Guard this route  
-	public function __construct() {
-        $this->middleware('auth');
-    }
-
     /**
      * Show the application dashboard.
      *

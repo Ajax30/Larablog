@@ -10,11 +10,6 @@ use App\Models\UserProfile;
 class UserProfileController extends Controller
 {
 
-  // Guard this route  
-	public function __construct() {
-			$this->middleware('auth');
-	}
-
 	public function index(UserProfile $user)
 	{
 			return view('dashboard.userprofile',
