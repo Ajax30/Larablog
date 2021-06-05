@@ -10,11 +10,6 @@ use App\Models\UserProfile;
 class UserProfileController extends Controller
 {
 
-  // Guard this route  
-	public function __construct() {
-			$this->middleware('auth');
-	}
-
 	public function index(UserProfile $user)
 	{
 			return view('dashboard.userprofile',
@@ -24,6 +19,11 @@ class UserProfileController extends Controller
 
     public function update(Request $request)
     {
+
+			if($request->isMethod('GET')){
+				return redirect()->route('profile');
+			}
+
 			$current_user = Auth::user();
 			
 			$request->validate([
