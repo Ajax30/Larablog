@@ -19,6 +19,11 @@ class UserProfileController extends Controller
 
     public function update(Request $request)
     {
+
+			if($request->isMethod('GET')){
+				return redirect()->route('profile');
+			}
+
 			$current_user = Auth::user();
 			
 			$request->validate([
