@@ -13039,13 +13039,36 @@ h3 {
 }
 .with-floating-label label {
   position: absolute;
-  top: -6px;
+  top: 10px;
   padding: 0 3px;
   background: #fff;
   left: 0.75rem;
   margin: 0 0 0 -2px;
-  font-size: 12px;
+  font-size: inherit;
   line-height: 1;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out, top 0.3s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .with-floating-label label {
+    transition: none;
+  }
+}
+.with-floating-label input:not(:-moz-placeholder-shown) + label, .with-floating-label textarea:not(:-moz-placeholder-shown) + label {
+  top: -6px;
+  font-size: 12px;
+  opacity: 1;
+}
+.with-floating-label input:not(:-ms-input-placeholder) + label, .with-floating-label textarea:not(:-ms-input-placeholder) + label {
+  top: -6px;
+  font-size: 12px;
+  opacity: 1;
+}
+.with-floating-label input:not(:placeholder-shown) + label,
+.with-floating-label textarea:not(:placeholder-shown) + label {
+  top: -6px;
+  font-size: 12px;
+  opacity: 1;
 }
 
 .file-upload-btn {

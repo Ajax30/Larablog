@@ -7,48 +7,47 @@
             <div class="card">
                 <div class="card-header">{{ __('Edit your profile') }}</div>
                 <div class="card-body">
-                    <form action="{{ route('profile.update') }}" enctype='multipart/form-data' method="post" novalidate>
+                    <form action="{{ route('profile.update') }}" enctype='multipart/form-data' method="post" novalidate autocomplete="off">
                         {{csrf_field()}}
 
                         <div class="form-group with-floating-label">
+                          <input type="text" id="username" name="username" placeholder="Username" class="form-control" value="{{old('username', $current_user->username)}}">
                           <label for="username" class="text-muted">Username</label>
-                          <input type="text" id="username" name="username" placeholder="Your username" class="form-control" value="{{old('username', $current_user->username)}}">
                           @error('username')
                             <span class="errormsg text-danger">{{ $message }}</span>
                           @enderror
                       </div>
 
                         <div class="form-group with-floating-label">
+                            <input type="text" id="first_name" name="first_name" placeholder="First name" class="form-control" value="{{old('first_name', $current_user->first_name)}}">
                             <label for="first_name" class="text-muted">First name</label>
-                            <input type="text" id="first_name" name="first_name" placeholder="Your first name" class="form-control" value="{{old('first_name', $current_user->first_name)}}">
                             @error('first_name')
                               <span class="errormsg text-danger">{{ $message }}</span>
                             @enderror
                         </div>
 
 												<div class="form-group with-floating-label">
-                            <label for="last_name" class="text-muted">Last name</label>
                             <input type="text" id="last_name" name="last_name" placeholder="Your last name" class="form-control" value="{{old('last_name', $current_user->last_name)}}">
+                            <label for="last_name" class="text-muted">Last name</label>
                             @error('last_name')
                               <span class="errormsg text-danger">{{ $message }}</span>
                             @enderror
                         </div>
 
 												<div class="form-group with-floating-label">
-                            <label for="email" class="text-muted">E-mail address</label>
-                            <input type="text" id="email" name="email" placeholder="A valid email address" class="form-control" value="{{old('email', $current_user->email)}}">
+                            <input type="text" id="email" name="email" placeholder="Email address" class="form-control" value="{{old('email', $current_user->email)}}">
+                            <label for="email" class="text-muted">Email address</label>
                             @error('email')
                               <span class="errormsg text-danger">{{ $message }}</span>
                             @enderror
                         </div>
 
 												<div class="form-group with-floating-label">
-                          <label for="bio" class="text-muted">Bio</label>
-													<textarea name="bio" id="bio" class="form-control" placeholder="A few words about you" cols="30" rows="6">{{old('bio', $current_user->bio)}}</textarea>
-
-                            @error('bio')
-                              <span class="errormsg text-danger">{{ $message }}</span>
-                            @enderror
+													<textarea name="bio" id="bio" class="form-control" placeholder="Bio" cols="30" rows="6">{{old('bio', $current_user->bio)}}</textarea>
+                          <label for="bio" class="text-muted">Bio</label>    
+                          @error('bio')
+                            <span class="errormsg text-danger">{{ $message }}</span>
+                          @enderror
 												</div>
 
                         <label for="avatar" class="text-muted">Upload avatar</label>
