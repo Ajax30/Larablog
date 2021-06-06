@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">{{ __('Edit your profile') }}</div>
                 <div class="card-body">
-                    <form action="{{ route('profile.update') }}" enctype='multipart/form-data' method="post" novalidate autocomplete="off">
+                    <form action="{{ route('profile.update') }}" enctype='multipart/form-data' method="post" novalidate>
                         {{csrf_field()}}
 
                         <div class="form-group with-floating-label">
