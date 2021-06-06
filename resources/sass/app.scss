@@ -10,11 +10,11 @@
 
 
 // Form overwrites
-.form-control:focus {
+.form-control:focus,
+.is-invalid:focus {
 	box-shadow: none;
 	border-color: #c4c4c4;
 }
-
 
 // Custom forms
 .with-floating-label {
