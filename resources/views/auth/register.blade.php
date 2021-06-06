@@ -11,6 +11,18 @@
                     <form method="POST" action="{{ route('register') }}" novalidate>
                         @csrf
 
+												<div class="form-group">
+                            
+													<input id="username" type="text" placeholder="Username" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>
+
+													@error('username')
+															<span class="invalid-feedback" role="alert">
+																	<strong>{{ $message }}</strong>
+															</span>
+													@enderror
+													
+											</div>
+
                         <div class="form-group">
                             
                             <input id="first_name" type="text" placeholder="First name" class="form-control @error('first_name') is-invalid @enderror" name="first_name" value="{{ old('first_name') }}" required autocomplete="first_name" autofocus>

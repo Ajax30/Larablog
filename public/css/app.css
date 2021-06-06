@@ -13029,6 +13029,25 @@ h3 {
     border-color: #dee2e6;
   }
 }
+.form-control:focus {
+  box-shadow: none;
+  border-color: #c4c4c4;
+}
+
+.with-floating-label {
+  position: relative;
+}
+.with-floating-label label {
+  position: absolute;
+  top: -5px;
+  padding: 0 3px;
+  background: #fff;
+  left: 0.75rem;
+  margin: 0 0 0 -2px;
+  font-size: 12px;
+  line-height: 1;
+}
+
 .file-upload-btn {
   width: 350px;
   position: relative;

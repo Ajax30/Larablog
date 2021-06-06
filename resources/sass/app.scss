@@ -9,6 +9,30 @@
 @import '~bootstrap/scss/bootstrap';
 
 
+// Form overwrites
+.form-control:focus {
+	box-shadow: none;
+	border-color: #c4c4c4;
+}
+
+
+// Custom forms
+.with-floating-label {
+	position: relative;
+
+	label {
+		position: absolute;
+		top: -5px;
+		padding: 0 3px;
+		background: #fff;
+		left: 0.75rem;
+		margin: 0 0 0 -2px;
+		font-size: 12px;
+		line-height: 1;
+	}
+}
+
+
 // More Button styles
 
 .file-upload-btn {
