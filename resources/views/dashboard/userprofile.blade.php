@@ -11,42 +11,42 @@
                         {{csrf_field()}}
 
                         <div class="form-group with-floating-label">
-                          <input type="text" id="username" name="username" placeholder="Username" class="form-control" value="{{old('username', $current_user->username)}}">
+                          <input type="text" id="username" name="username" placeholder="Username" class="form-control @error('username') is-invalid @enderror" value="{{old('username', $current_user->username)}}">
                           <label for="username" class="text-muted">Username</label>
                           @error('username')
-                            <span class="errormsg text-danger">{{ $message }}</span>
+                            <span class="invalid-feedback" role="alert">{{ $message }}</span>
                           @enderror
                       </div>
 
                         <div class="form-group with-floating-label">
-                            <input type="text" id="first_name" name="first_name" placeholder="First name" class="form-control" value="{{old('first_name', $current_user->first_name)}}">
+                            <input type="text" id="first_name" name="first_name" placeholder="First name" class="form-control @error('first_name') is-invalid @enderror" value="{{old('first_name', $current_user->first_name)}}">
                             <label for="first_name" class="text-muted">First name</label>
                             @error('first_name')
-                              <span class="errormsg text-danger">{{ $message }}</span>
+                              <span class="invalid-feedback" role="alert">{{ $message }}</span>
                             @enderror
                         </div>
 
 												<div class="form-group with-floating-label">
-                            <input type="text" id="last_name" name="last_name" placeholder="Your last name" class="form-control" value="{{old('last_name', $current_user->last_name)}}">
+                            <input type="text" id="last_name" name="last_name" placeholder="Your last name" class="form-control @error('last_name') is-invalid @enderror" value="{{old('last_name', $current_user->last_name)}}">
                             <label for="last_name" class="text-muted">Last name</label>
                             @error('last_name')
-                              <span class="errormsg text-danger">{{ $message }}</span>
+                              <span class="invalid-feedback" role="alert">{{ $message }}</span>
                             @enderror
                         </div>
 
 												<div class="form-group with-floating-label">
-                            <input type="text" id="email" name="email" placeholder="Email address" class="form-control" value="{{old('email', $current_user->email)}}">
+                            <input type="text" id="email" name="email" placeholder="Email address" class="form-control @error('email') is-invalid @enderror" value="{{old('email', $current_user->email)}}">
                             <label for="email" class="text-muted">Email address</label>
                             @error('email')
-                              <span class="errormsg text-danger">{{ $message }}</span>
+                              <span class="invalid-feedback" role="alert">{{ $message }}</span>
                             @enderror
                         </div>
 
 												<div class="form-group with-floating-label">
-													<textarea name="bio" id="bio" class="form-control" placeholder="Bio" cols="30" rows="6">{{old('bio', $current_user->bio)}}</textarea>
+													<textarea name="bio" id="bio" class="form-control @error('bio') is-invalid @enderror" placeholder="Bio" cols="30" rows="6">{{old('bio', $current_user->bio)}}</textarea>
                           <label for="bio" class="text-muted">Bio</label>    
                           @error('bio')
-                            <span class="errormsg text-danger">{{ $message }}</span>
+                            <span class="invalid-feedback" role="alert">{{ $message }}</span>
                           @enderror
 												</div>
 
@@ -55,7 +55,7 @@
 													<div class="w-75 pr-1">
 														<input type='file' name='avatar' id="avatar" class="form-control border-0 py-0 pl-0 file-upload-btn" value="{{$current_user->avatar}}">
 														@if ($errors->has('avatar'))
-																<span class="errormsg text-danger">{{ $errors->first('avatar') }}</span>
+																<span class="invalid-feedback" role="alert">{{ $errors->first('avatar') }}</span>
 														@endif
 													</div>
 
