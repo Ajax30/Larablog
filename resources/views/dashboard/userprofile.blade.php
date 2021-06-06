@@ -11,6 +11,13 @@
                         {{csrf_field()}}
 
                         <div class="form-group">
+                          <input type="text" id="username" name="username" placeholder="Username" class="form-control" value="{{old('username', $current_user->username)}}">
+                          @error('username')
+                            <span class="errormsg text-danger">{{ $message }}</span>
+                          @enderror
+                      </div>
+
+                        <div class="form-group">
                             <input type="text" id="first_name" name="first_name" placeholder="First name" class="form-control" value="{{old('first_name', $current_user->first_name)}}">
                             @error('first_name')
                               <span class="errormsg text-danger">{{ $message }}</span>
