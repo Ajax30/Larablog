@@ -14,7 +14,9 @@
                           <input type="text" id="username" name="username" placeholder="Username" class="form-control @error('username') is-invalid @enderror" value="{{old('username', $current_user->username)}}">
                           <label for="username" class="text-muted">Username</label>
                           @error('username')
-                            <span class="invalid-feedback" role="alert">{{ $message }}</span>
+                            <span class="invalid-feedback" role="alert">
+																	<strong>{{ $message }}</strong>
+															</span>
                           @enderror
                       </div>
 
@@ -22,7 +24,9 @@
                             <input type="text" id="first_name" name="first_name" placeholder="First name" class="form-control @error('first_name') is-invalid @enderror" value="{{old('first_name', $current_user->first_name)}}">
                             <label for="first_name" class="text-muted">First name</label>
                             @error('first_name')
-                              <span class="invalid-feedback" role="alert">{{ $message }}</span>
+                              <span class="invalid-feedback" role="alert">
+																	<strong>{{ $message }}</strong>
+															</span>
                             @enderror
                         </div>
 
@@ -30,7 +34,9 @@
                             <input type="text" id="last_name" name="last_name" placeholder="Your last name" class="form-control @error('last_name') is-invalid @enderror" value="{{old('last_name', $current_user->last_name)}}">
                             <label for="last_name" class="text-muted">Last name</label>
                             @error('last_name')
-                              <span class="invalid-feedback" role="alert">{{ $message }}</span>
+                              <span class="invalid-feedback" role="alert">
+																	<strong>{{ $message }}</strong>
+															</span>
                             @enderror
                         </div>
 
@@ -38,7 +44,9 @@
                             <input type="text" id="email" name="email" placeholder="Email address" class="form-control @error('email') is-invalid @enderror" value="{{old('email', $current_user->email)}}">
                             <label for="email" class="text-muted">Email address</label>
                             @error('email')
-                              <span class="invalid-feedback" role="alert">{{ $message }}</span>
+                              <span class="invalid-feedback" role="alert">
+																	<strong>{{ $message }}</strong>
+															</span>
                             @enderror
                         </div>
 
@@ -46,7 +54,9 @@
 													<textarea name="bio" id="bio" class="form-control @error('bio') is-invalid @enderror" placeholder="Bio" cols="30" rows="6">{{old('bio', $current_user->bio)}}</textarea>
                           <label for="bio" class="text-muted">Bio</label>    
                           @error('bio')
-                            <span class="invalid-feedback" role="alert">{{ $message }}</span>
+                            <span class="invalid-feedback" role="alert">
+																	<strong>{{ $message }}</strong>
+															</span>
                           @enderror
 												</div>
 
