@@ -12,7 +12,7 @@
 
                         <div class="form-group with-floating-label">
                           <label for="username" class="text-muted">Username</label>
-                          <input type="text" id="username" name="username" placeholder="Username" class="form-control" value="{{old('username', $current_user->username)}}">
+                          <input type="text" id="username" name="username" placeholder="Your username" class="form-control" value="{{old('username', $current_user->username)}}">
                           @error('username')
                             <span class="errormsg text-danger">{{ $message }}</span>
                           @enderror
@@ -20,7 +20,7 @@
 
                         <div class="form-group with-floating-label">
                             <label for="first_name" class="text-muted">First name</label>
-                            <input type="text" id="first_name" name="first_name" placeholder="First name" class="form-control" value="{{old('first_name', $current_user->first_name)}}">
+                            <input type="text" id="first_name" name="first_name" placeholder="Your first name" class="form-control" value="{{old('first_name', $current_user->first_name)}}">
                             @error('first_name')
                               <span class="errormsg text-danger">{{ $message }}</span>
                             @enderror
@@ -28,7 +28,7 @@
 
 												<div class="form-group with-floating-label">
                             <label for="last_name" class="text-muted">Last name</label>
-                            <input type="text" id="last_name" name="last_name" placeholder="Last name" class="form-control" value="{{old('last_name', $current_user->last_name)}}">
+                            <input type="text" id="last_name" name="last_name" placeholder="Your last name" class="form-control" value="{{old('last_name', $current_user->last_name)}}">
                             @error('last_name')
                               <span class="errormsg text-danger">{{ $message }}</span>
                             @enderror
@@ -36,7 +36,7 @@
 
 												<div class="form-group with-floating-label">
                             <label for="email" class="text-muted">E-mail address</label>
-                            <input type="text" id="email" name="email" placeholder="E-mail address" class="form-control" value="{{old('email', $current_user->email)}}">
+                            <input type="text" id="email" name="email" placeholder="A valid email address" class="form-control" value="{{old('email', $current_user->email)}}">
                             @error('email')
                               <span class="errormsg text-danger">{{ $message }}</span>
                             @enderror
@@ -44,7 +44,7 @@
 
 												<div class="form-group with-floating-label">
                           <label for="bio" class="text-muted">Bio</label>
-													<textarea name="bio" id="bio" class="form-control" placeholder="Bio" cols="30" rows="6">{{old('bio', $current_user->bio)}}</textarea>
+													<textarea name="bio" id="bio" class="form-control" placeholder="A few words about you" cols="30" rows="6">{{old('bio', $current_user->bio)}}</textarea>
 
                             @error('bio')
                               <span class="errormsg text-danger">{{ $message }}</span>
