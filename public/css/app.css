@@ -13029,7 +13029,8 @@ h3 {
     border-color: #dee2e6;
   }
 }
-.form-control:focus {
+.form-control:focus,
+.is-invalid:focus {
   box-shadow: none;
   border-color: #c4c4c4;
 }
