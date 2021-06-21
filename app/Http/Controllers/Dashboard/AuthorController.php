@@ -9,11 +9,11 @@ class AuthorController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('role:ROLE_Author');
+        $this->middleware('role:Author');
     }
 
     public function index()
     {
-        return view('dasboard.author');
+        return view('dashboard.author');
     }
 }
