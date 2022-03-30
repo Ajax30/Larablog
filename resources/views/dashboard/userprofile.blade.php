@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <div class="card">
+            <div class="card shadow-sm">
                 <div class="card-header">{{ __('Edit your profile') }}</div>
                 <div class="card-body">
                     <form action="{{ route('profile.update') }}" enctype='multipart/form-data' method="post" novalidate>

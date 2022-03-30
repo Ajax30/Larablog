@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
@@ -7,6 +6,7 @@ use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
@@ -66,8 +66,13 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $user_count = DB::table('users')->count();
+
+        $role_id = $user_count == 0 ? 1 : 3;
+        
         return User::create([
             'username' => $data['username'],
+            'role_id' => $role_id,
             'first_name' => $data['first_name'],
             'last_name' => $data['last_name'],
             'email' => $data['email'],
